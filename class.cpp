@@ -80,7 +80,33 @@ void Book::bookList() {
 }
 
 void Book::saleBook() {
+    string title;
+    int quantity;
 
+    Book delBook;
+    //delBook.title = title;
+    //delBook.author = author;
+    //delBook.price = price;
+    //delBook.quantity = quantity;
+    soldBooks.push_back(delBook);
+
+    cout << "Enter title of the book sold: ";
+    cin >> title;
+    cout << "Enter quantity sold: ";
+    cin >> quantity;
+    cout << "Sale recorded successfully." << std::endl;
+
+    for (int i = 0; i < availableBooks.size(); i++) {
+        if (availableBooks[i].title == title) {
+            availableBooks[i].quantity -= quantity;
+            //soldBooks.push_back(availableBooks[i]);
+            soldBooks[i].title = availableBooks[i].title;
+            soldBooks[i].author = availableBooks[i].author;
+            soldBooks[i].price = availableBooks[i].price;
+            soldBooks[i].quantity += quantity;
+            break;
+        }
+    }
 }
 
 void Book::saleList() {

@@ -25,6 +25,7 @@ private:
 
 
 extern vector<Book> availableBooks;
+extern vector<Book> soldBooks;
 
 #endif // CLASS
 
