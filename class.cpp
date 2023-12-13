@@ -120,8 +120,17 @@ void Book::saleBook() {
 
     for (int i = 0; i < availableBooks.size(); i++) {
         if (availableBooks[i].title == title && author==availableBooks[i].author) {
+            if(availableBooks[i].quantity>=quantity)
+            {
             g=i;
             availableBooks[i].quantity -= quantity;
+            }
+            else
+            {
+                cout << "We have only: " << availableBooks[i].quantity << " books"<<endl;
+                system("pause");
+                Book::interface();
+            }
             break;
         }
     }
