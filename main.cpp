@@ -8,10 +8,8 @@ using namespace std;
 int main()
 {
     Book book;
-    book.addBook();
-    int i=0;
+    book.interface();
 
-    cout << availableBooks[i].title << " by " << availableBooks[i].author << " - $" << availableBooks[i].price << " (" << availableBooks[i].quantity << " available)" << std::endl;
     return 0;
 }
 
