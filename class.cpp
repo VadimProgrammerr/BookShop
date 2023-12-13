@@ -11,7 +11,7 @@ Book::~Book() {
 
 
 vector<Book> availableBooks;
-//vector<Book> soldBooks;
+vector<Book> soldBooks;
 
 void Book::addBook() {
     string title, author;
@@ -34,13 +34,13 @@ void Book::addBook() {
     newBook.quantity = quantity;
     availableBooks.push_back(newBook);
 
-
     cout << "Book added successfully." << endl;
 }
 
 void Book::interface() {
     int choice;
     do {
+        system("CLS");
         cout << "1. Add new book" << endl;
         cout << "2. Record book sale" << endl;
         cout << "3. Display available books" << endl;
@@ -68,11 +68,11 @@ void Book::interface() {
             default:
                 cout << "Invalid choice. Please try again." << endl;
         }
+        system("pause");
     } while (choice != 5);
 }
 
 void Book::bookList() {
-    // Вывод списка доступных книг
     cout << "Available Books:" << endl;
     for (int i = 0; i < availableBooks.size(); i++) {
         cout << availableBooks[i].title << " by " << availableBooks[i].author << " - $" << availableBooks[i].price << " (" << availableBooks[i].quantity << " available)" << endl;
@@ -110,7 +110,10 @@ void Book::saleBook() {
 }
 
 void Book::saleList() {
-
+    cout << "Sold Books:" << endl;
+    for (int i = 0; i < soldBooks.size(); i++) {
+        cout << soldBooks[i].title << " by " << soldBooks[i].author << " - $" << soldBooks[i].price << " (" << soldBooks[i].quantity << " sold)" << endl;
+    }
 }
 
 
