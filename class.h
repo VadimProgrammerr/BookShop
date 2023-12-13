@@ -10,6 +10,7 @@ class Book {
 public:
     Book();
     ~Book();
+private:
     void interface();
     string title;
     string author;
@@ -21,8 +22,6 @@ public:
     void bookList();
     void saleList();
     void profit();
-private:
-
 };
 
 
