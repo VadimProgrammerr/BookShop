@@ -10,21 +10,23 @@ class Book {
 public:
     Book();
     ~Book();
-    void menu();
+private:
+    void interface();
     string title;
     string author;
-    double price;
+    double buyprice;
+    double sellprice;
     int quantity;
     void addBook();
-private:
-
     void saleBook();
     void bookList();
     void saleList();
+    void profit();
 };
 
 
 extern vector<Book> availableBooks;
+extern vector<Book> soldBooks;
 
 #endif // CLASS
 
