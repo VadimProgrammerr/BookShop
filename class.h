@@ -13,12 +13,14 @@ public:
     void interface();
     string title;
     string author;
-    double price;
+    double buyprice;
+    double sellprice;
     int quantity;
     void addBook();
     void saleBook();
     void bookList();
     void saleList();
+    void profit();
 private:
 
 };
